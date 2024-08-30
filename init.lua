@@ -5,22 +5,17 @@ require('treesitter')
 require('lsp')        -- Load LSP configuration
 require("nvim-tree").setup()
 
--- Configure toggle_terminal
 
-local toggle_terminal = require('toggle_terminal')
-
--- Map <leader>t to toggle terminal
-vim.api.nvim_set_keymap('n', '<leader>t', ':lua require("toggle_terminal").ToggleTerminal()<CR>', { noremap = true, silent = true })
-
--- Map <leader>e to open nvim-tree
-vim.api.nvim_set_keymap('n', '<leader>e', ':NvimTreeToggle<CR>', { noremap = true, silent = true })
-
-
-
--- Set tab and indentation options
-vim.opt.tabstop = 4       -- Number of spaces that a <Tab> in the file counts for
-vim.opt.shiftwidth = 4    -- Number of spaces to use for each step of (auto)indent
-vim.opt.expandtab = true  -- Convert tabs to spaces
+vim.g.lightline = {
+  colorscheme = 'wombat',
+  active = {
+    left = { { 'mode', 'paste' },
+             { 'gitbranch', 'readonly', 'filename', 'modified' } }
+  },
+  component_function = {
+    gitbranch = 'FugitiveHead',
+  }
+}
 
 
 -- cmp.lua or init.lua (where you set up cmp)
@@ -53,6 +48,3 @@ cmp.setup({
     { name = 'path' },
   })
 })
-
-
-

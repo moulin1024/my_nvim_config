@@ -2,6 +2,8 @@
 require('packer').startup(function(use)
     use 'wbthomason/packer.nvim'
 
+    use 'itchyny/lightline.vim'
+
 
     use 'tpope/vim-fugitive'
     -- Vim commentary plugin

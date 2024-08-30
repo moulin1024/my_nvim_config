@@ -105,6 +105,11 @@ _G.packer_plugins = {
     path = "/Users/moulin/.local/share/nvim/site/pack/packer/start/copilot.vim",
     url = "https://github.com/github/copilot.vim"
   },
+  ["lightline.vim"] = {
+    loaded = true,
+    path = "/Users/moulin/.local/share/nvim/site/pack/packer/start/lightline.vim",
+    url = "https://github.com/itchyny/lightline.vim"
+  },
   ["lspkind-nvim"] = {
     loaded = true,
     path = "/Users/moulin/.local/share/nvim/site/pack/packer/start/lspkind-nvim",
