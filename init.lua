@@ -5,6 +5,8 @@ require('treesitter')
 require('lsp')        -- Load LSP configuration
 require("nvim-tree").setup()
 
+-- Configure toggle_terminal
+
 local toggle_terminal = require('toggle_terminal')
 
 -- Map <leader>t to toggle terminal
@@ -12,6 +14,7 @@ vim.api.nvim_set_keymap('n', '<leader>t', ':lua require("toggle_terminal").Toggl
 
 -- Map <leader>e to open nvim-tree
 vim.api.nvim_set_keymap('n', '<leader>e', ':NvimTreeToggle<CR>', { noremap = true, silent = true })
+
 
 
 -- Set tab and indentation options
