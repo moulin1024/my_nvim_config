@@ -6,6 +6,16 @@ require('lsp')        -- Load LSP configuration
 require("nvim-tree").setup()
 
 
+-- nvim-tree configuration
+require'nvim-tree'.setup {
+  view = {
+    width = 40,  -- Set the width to 40 columns
+    side = 'left',  -- Position of the tree (left or right)
+  },
+  -- Other settings can be added here as needed
+}
+
+
 vim.g.lightline = {
   colorscheme = 'wombat',
   active = {

@@ -1,5 +1,6 @@
 -- settings.lua
 vim.opt.number = true
+vim.opt.relativenumber = true  -- Enables relative line numbers
 vim.cmd('colorscheme habamax')
 
 
